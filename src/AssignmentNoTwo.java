@@ -1,5 +1,15 @@
 import java.util.Scanner;
 
+//            TASK 2              //
+//Write a program which reads three integers (say, a, b and c), then prints these three numbers
+//        System.out.println(a + " " + b + " " + c);
+//        and then rearranges the values in these variables in such a way that a contains the
+//        smallest of the three numbers, b — the middle one, and c — the largest. Print again
+//        System.out.println(a + " " + b + " " + c);
+//        and you shoud see the same three numbers, but in ascending order.
+//        Any two (or all three) numbers may be equal. Do not use arrays or Strings!
+
+
 public class AssignmentNoTwo {
     public static void main(String[] args) {
         Scanner scan  = new Scanner(System.in);
