@@ -10,17 +10,16 @@ import java.util.Scanner;
 //        Any two (or all three) numbers may be equal. Do not use arrays or Strings!
 
 
-public class AssignmentNoTwo {
-    public static void main(String[] args) {
-        Scanner scan  = new Scanner(System.in);
-        System.out.println("Input number a: ");
-        int a = scan.nextInt();
-        System.out.println("Input number b: ");
-        int b = scan.nextInt();
-        System.out.println("Input number c: ");
-        int c = scan.nextInt();
+class ThreeNumberSorter {
+    private int a, b, c;
 
-        System.out.println(a + " " + b + " " + c);
+    public ThreeNumberSorter(int a, int b, int c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public int[] sort() {
         int smallest = 0;
         int middle = 0;
         int biggest = 0;
@@ -34,8 +33,7 @@ public class AssignmentNoTwo {
                 smallest = c;
                 middle = a;
                 biggest = b;
-            }
-            else {
+            } else {
                 smallest = a;
                 middle = c;
                 biggest = b;
@@ -49,8 +47,7 @@ public class AssignmentNoTwo {
                 smallest = b;
                 middle = c;
                 biggest = a;
-            }
-            else {
+            } else {
                 smallest = c;
                 middle = b;
                 biggest = a;
@@ -66,10 +63,24 @@ public class AssignmentNoTwo {
                 biggest = b;
             }
         }
-        a = smallest;
-        b = middle;
-        c = biggest;
+        return new int[]{smallest, middle, biggest};
+    }
+}
+
+public class AssignmentNoTwo {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Input number a: ");
+        int a = scan.nextInt();
+        System.out.println("Input number b: ");
+        int b = scan.nextInt();
+        System.out.println("Input number c: ");
+        int c = scan.nextInt();
 
         System.out.println(a + " " + b + " " + c);
+
+        int[] sorted = new ThreeNumberSorter(a, b, c).sort();
+
+        System.out.println(sorted[0] + " " + sorted[1] + " " + sorted[2]);
     }
 }
