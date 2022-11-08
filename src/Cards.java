@@ -51,6 +51,8 @@ public class Cards {
                 case 10 -> "Nine";
                 case 11 -> "Ten";
                 case 12 -> "Jack";
+                case 13 -> "Queen";
+                case 14 -> "King";
                 default -> "Unknown rank";
             };
             System.out.println(rank + " of " + color);
